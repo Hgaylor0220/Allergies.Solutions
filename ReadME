@@ -1,0 +1,14 @@
+Scenario: User answers if they are allergic to an allergen
+When the user inputs a character
+Given the user enters 'y' or 'n'
+Then move to next question
+
+Scenario: User answers if they are allergic to an allergen
+When the user inputs a character
+Given the user enters a character other than 'y' or 'n'
+Then ask same question again
+
+Scenario: Display allergens score
+When the user answers all the questions 
+Given the user enters 'Y' or 'N' to each question
+Then show the user their allergen score
