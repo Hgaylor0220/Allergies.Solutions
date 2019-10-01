@@ -17,6 +17,17 @@ namespace Allergies.Test
             //assert
             Assert.AreEqual(1,result);
         }
+        [TestMethod]
+        public void CalculateScore_CalculatesAllergenScore_255()
+        {
+            //arrage
+            bool[] inputarray = { true, true, true, true, true, true, true, true };
+            //act
+            int result = AllergiesClass.CalculateScore(inputarray);
+            //assert
+            Assert.AreEqual(255, result);
+        }
+
 
 
 
